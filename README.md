@@ -2,7 +2,7 @@
 
 Very good code yes yeah totally
 
-#How use?
+# How use?
 
 1. Install [Python](https://www.python.org/downloads/) (kinda need that)
 2. Install [Git](https://git-scm.com/downloads) (downloady thing)
@@ -12,6 +12,6 @@ Very good code yes yeah totally
 6. `pip install -r requirements.txt`
 7. `python "kirby balls.py"`
 
-#How add sound effects
+# How add sound effects
 
 In the assets folder add audio files as mp3, the trigger word will be the title. Will I add support for more formats? Maybe. 
