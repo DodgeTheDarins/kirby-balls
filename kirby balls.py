@@ -8,6 +8,8 @@ from pynput import keyboard
 import threading
 import re
 
+os.environ["PYNPUT_BACKEND"] = "uinput"
+
 text = []
 pygame.init()
 
