@@ -8,7 +8,7 @@ from pynput import keyboard
 import threading
 import re
 
-os.environ["PYNPUT_BACKEND"] = "uinput"
+# os.environ["PYNPUT_BACKEND"] = "uinput"
 
 text = []
 pygame.init()
@@ -17,11 +17,11 @@ def mrbeast(relative_path):
     try:
         base_path = sys._MEIPASS
     except Exception:
-        base_path = os.path.abspath('./assets')
+        base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'assets'))
 
     return os.path.normpath(os.path.join(base_path, relative_path))
 
-files_list_with_ext = glob.glob(mrbeast("./*.mp3"))
+files_list_with_ext = [os.path.join(mrbeast("."), file) for file in os.listdir(mrbeast(".")) if file.endswith(".mp3")]
 files_list = []
 
 for file in files_list_with_ext:
